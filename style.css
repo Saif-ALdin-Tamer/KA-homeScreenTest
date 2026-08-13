@@ -2081,7 +2081,7 @@ html[dir="rtl"] .nav-cta svg {
   background-size: cover;
   background-position: 75% center;
   background-repeat: no-repeat;
-  transform: translateX(19vw);
+  transform: translateX(16vw);
   /* Smooth fade into background on the left and bottom */
   -webkit-mask-image:
     linear-gradient(to right, transparent 0%, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0.7) 45%, black 62%),
