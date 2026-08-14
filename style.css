@@ -2070,27 +2070,38 @@ html[dir="rtl"] .nav-cta svg {
   inset: 0;
   z-index: 1;
   overflow: hidden;
-  background: #04060a;
+  background: #080c17;
 }
 .hero-image .photo-bg {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  right: 0;
+  width: min(65vw, 950px);
+  height: min(88vh, 820px);
+  transform: translate(6vw, -56%);
   background-image: url('Final-HomePhoto.jpeg');
   background-size: cover;
-  background-position: 75% center;
+  background-position: 70% center;
   background-repeat: no-repeat;
-  transform: translate(19vw, -5.5vh);
-  /* Smooth fade into background on the left and bottom */
+  /* Ultra-smooth seamless fade into website background on all edges */
   -webkit-mask-image:
-    linear-gradient(to right, transparent 0%, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0.7) 45%, black 62%),
-    linear-gradient(to bottom, black 80%, transparent 100%);
+    linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 15%, rgba(0,0,0,0.8) 35%, black 50%),
+    linear-gradient(to top, transparent 0%, rgba(0,0,0,0.7) 12%, black 25%),
+    linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 12%, black 25%),
+    linear-gradient(to left, transparent 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0.7) 45%, black 70%);
   -webkit-mask-composite: destination-in;
   mask-image:
-    linear-gradient(to right, transparent 0%, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0.7) 45%, black 62%),
-    linear-gradient(to bottom, black 80%, transparent 100%);
+    linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 15%, rgba(0,0,0,0.8) 35%, black 50%),
+    linear-gradient(to top, transparent 0%, rgba(0,0,0,0.7) 12%, black 25%),
+    linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 12%, black 25%),
+    linear-gradient(to left, transparent 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0.7) 45%, black 70%);
   mask-composite: intersect;
+}
+@media (max-width: 1440px) {
+  .hero-image .photo-bg {
+    transform: translate(16vw, -56%);
+    background-position: 85% center;
+  }
 }
 /* Redundant ::before and ::after removed from .hero-image because they are now global on body */
 .hero-content {
